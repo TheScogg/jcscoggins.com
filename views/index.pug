@@ -1,0 +1,10 @@
+extends navigation
+block content
+  p#demo Scroll Up and Down this page to see the parallax scrolling effect.
+  div(style='height:1000px;background-color:white;font-size:36px')
+    if (user)
+      p You are currently logged in as #{user.username}
+  script.
+
+    var page = 'Home';
+    document.getElementById("demo").innerHTML = "Paragraph changed!";

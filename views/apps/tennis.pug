@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    link(rel="stylesheet" href="/stylesheets/style.css")
+    script(src="/javascripts/scripts.js")
+
+  body
+    canvas#gameCanvas(width='800', height='600')
+  script.
+    var canvas;
+    var canvasContext;
+
+    window.onload = function() {
+      console.log("Hello world");
+
+      canvas = document.getElementById('gameCanvas');
+      canvasContext = canvas.getContext('2d');
+
+      canvasContext.fillStyle	=	'black';
+    }

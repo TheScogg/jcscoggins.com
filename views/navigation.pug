@@ -1,0 +1,32 @@
+doctype html
+html
+  head
+    title= title
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css', rel='stylesheet', media='screen')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+
+    script(src='http://code.jquery.com/jquery.js')
+    script(src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js')
+    script(type="text/javascript", src="javascript/scripts.js")
+  body
+    if (error && error.length > 0)
+      br
+      h4.error-msg= error
+      br
+
+    ul
+        li
+            a(href='#home') Home
+        li
+            a(href='#news') News
+        li
+            a(href='#contact') Contact
+        li(style='float:right')
+          if (user)
+            a.active(href='#about') #{user.username}
+          if (!user)
+            a.active(href='/loginportal') Log In
+
+
+    block content
