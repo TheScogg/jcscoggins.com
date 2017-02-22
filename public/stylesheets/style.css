@@ -1,7 +1,7 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: blue;
+  background-color: #ff0c07;
 }
 
 a {
@@ -14,7 +14,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: darkblue;
 }
 
 li {
@@ -34,12 +34,40 @@ li a {
     text-decoration: none;
 }
 
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-    background-color: #111;
-    text-decoration: none;
-    color: #d7dde5;
+.nav li a:hover {
+    background-color: #1c25ff;
+    color: white;
 }
+
+/* User Dropdown */
+.userDropdown {
+    display: none;
+    background-color: darkgrey;
+    float: right;
+    position: absolute;
+    right: 50px;
+    border-bottom-left-radius: 15px;
+}
+
+.userDropdown li {
+    display: block;
+    clear: both;
+    border-bottom: 2px dotted dimgrey;
+}
+
+.userDropdown li a {
+    display: block;
+    color: black;
+}
+
+/*!* Change the link color to #111 (black) on hover *!*/
+/*li a:hover {*/
+    /*background-color: #000000;*/
+    /*text-decoration: none;*/
+    /*color: #d7dde5;*/
+/*}*/
+
+
 
 .active {
     background-color: #4CAF50;

@@ -15,18 +15,29 @@ html
       h4.error-msg= error
       br
 
-    ul
+    ul.nav
         li
             a(href='#home') Home
         li
-            a(href='#news') News
+            a(href='#apps') Apps
+        li
+            a(href='#music') Music
         li
             a(href='#contact') Contact
         li(style='float:right')
           if (user)
-            a.active(href='#about') #{user.username}
+            a.username #{user.username}
+            //- ul(data-role='list-view')
+            //-   li
+            //-     a(href='/myAccount') My Account
+            //-     a(href='/logout') Log Out
           if (!user)
-            a.active(href='/loginportal') Log In
+            a(href='/loginportal') Log In
 
+    ul.userDropdown
+        li
+            a(href="/myAccount") My Account
+        li
+            a(href="/logout") Logout
 
     block content
