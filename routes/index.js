@@ -8,10 +8,25 @@ router.get('/', (req,res) => {
     res.render('index', {user : req.user});
 })
 
-// Sample code to demonstrate route parameters
-// router.get('/users/:userID/books/:bookID', function (req, res) {
-//   res.send(req.params)
-// })
+router.get('/home', (req, res) => {
+    res.render('index', { });
+});
+
+router.get('/projects', (req, res) => {
+    res.render('projects', { });
+});
+
+router.get('/projects', (req, res) => {
+    res.render('projects', { });
+});
+
+router.get('/music', (req, res) => {
+    res.render('music', { });
+});
+
+router.get('/contact', (req, res) => {
+    res.render('contact', { });
+});
 
 router.get('/loginportal', (req, res) => {
     res.render('loginportal', { user : req.user });
@@ -21,9 +36,7 @@ router.get('/register', (req, res) => {
     res.render('register', { });
 });
 
-router.get('/home', (req, res) => {
-    res.render('home', { });
-});
+
 
 router.get('/tennis', (req, res) => {
     res.render('apps/tennis', { });

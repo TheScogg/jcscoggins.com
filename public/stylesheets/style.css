@@ -43,7 +43,7 @@ li a {
 
 /* Overwriting Bootstrap defaults */
 .nav > li > a:focus {
-    background-color: transparent;
+    background-color: green;
     color: white;
 }
 
