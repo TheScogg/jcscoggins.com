@@ -41,6 +41,12 @@ li a {
     border-radius: 10px;
 }
 
+/* Overwriting Bootstrap defaults */
+.nav > li > a:focus {
+    background-color: transparent;
+    color: white;
+}
+
 /* ICONS - Navbar */
 .fa {
     float:left;
@@ -94,8 +100,8 @@ li a {
     /*color: #d7dde5;*/
 /*}*/
 
-
-
-.active {
-    background-color: #4CAF50;
-}
+/* My Name is James Intro */
+/*.intro > p {*/
+    /*color: white;*/
+    /*!*font-size: 24px;*!*/
+/*}*/

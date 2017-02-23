@@ -15,11 +15,25 @@ $(document).ready(function (){
       $(".userDropdown").slideToggle();
     });
 
+    function navColor () {
+        var $icon = ($(this).children());
+        console.log($icon);
+
+        if ($icon.hasClass("fa-home")){
+            $($icon).css("color", "cyan");
+        } else if ($icon.hasClass("fa-spinner")) {
+            $($icon).css("color", "magenta");
+        } else if ($icon.hasClass("fa-music")) {
+            $($icon).css("color", "yellow");
+        } else if ($icon.hasClass("fa-envelope")) {
+            $($icon).css("color", "orange");
+        }
+    }
+
   // Color navbar icons when hovering over navbar sections
     $(".nav li a").hover(
         function () {
             // If class contains fa-home, fa-spinner, etc...
-
             // Assign particular icon to variable
             var $icon = ($(this).children());
             console.log($icon);
