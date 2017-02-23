@@ -9,35 +9,48 @@ html
     script(src='http://code.jquery.com/jquery.js')
     script(src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js')
     script(type="text/javascript", src="javascript/scripts.js")
+    script(type="text/javascript", src="https://use.fontawesome.com/33457e32a4.js")
   body
     if (error && error.length > 0)
       br
       h4.error-msg= error
       br
 
-    ul.nav
-        li
-            a(href='#home') Home
-        li
-            a(href='#apps') Apps
-        li
-            a(href='#music') Music
-        li
-            a(href='#contact') Contact
-        li(style='float:right')
-          if (user)
-            a.username #{user.username}
-            //- ul(data-role='list-view')
-            //-   li
-            //-     a(href='/myAccount') My Account
-            //-     a(href='/logout') Log Out
-          if (!user)
-            a(href='/loginportal') Log In
+    .container
+        .row
+            .col-lg-12.col-xs-12
+                ul.nav
+                    li
+                        a(href='#home') Home
+                            i.fa.fa-home(aria-hidden="true", style="font-size:1.2em")
+                    li
+                        a(href='#apps') Apps
+                            i.fa.fa-spinner(aria-hidden="true", style="font-size:1.2em")
+                    li
+                        a(href='#music') Music
+                            i.fa.fa-music(aria-hidden="true", style="font-size:1.2em")
+                    li
+                        a(href='#contact') Contact
+                            i.fa.fa-envelope(aria-hidden="true", style="font-size:1.2em")
+                    li(style='float:right')
+                      if (user)
+                        a.username #{user.username}
+                            i.fa.fa-user(aria-hidden="true", style="font-size:1.2em")
+                        //- ul(data-role='list-view')
+                        //-   li
+                        //-     a(href='/myAccount') My Account
+                        //-     a(href='/logout') Log Out
+                      if (!user)
+                        a(href='/loginportal') Log In
+                            i.fa.fa-user(aria-hidden="true", style="font-size:1.2em")
 
-    ul.userDropdown
-        li
-            a(href="/myAccount") My Account
-        li
-            a(href="/logout") Logout
 
+                ul.userDropdown
+                    li
+                        a(href="/myAccount") My Account
+                    li
+                        a(href="/logout") Logout
     block content
+
+
+
