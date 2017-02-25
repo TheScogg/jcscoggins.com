@@ -52,7 +52,7 @@ li a {
 
 /* Overwriting Bootstrap defaults */
 .navigationBar > li > a:focus {
-    background-color: green;
+    /*background-color: green;*/
     color: white;
 }
 
