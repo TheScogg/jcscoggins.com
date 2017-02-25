@@ -4,9 +4,16 @@ body {
   background-color: #393939;
 }
 
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
 a {
   color: #00B7FF;
 }
+
+
 
 /* NAVBAR */
 ul {
@@ -92,6 +99,31 @@ li a {
 .userDropdown li:hover {
     background-color: dimgrey;
 }
+
+/* CAROUSEL */
+/*.left.carousel-control {*/
+    /*border-radius: 10px 0 0 10px;*/
+/*}*/
+
+/*.right.carousel-control {*/
+    /*border-radius: 0px 10px 10px 0px;*/
+/*}*/
+
+/*.carousel-indicators {*/
+     /*position: absolute;*/
+     /*bottom: 10px;*/
+     /*left: 0;*/
+     /*right: 0;*/
+     /*text-align: center;*/
+     /*z-index: 15;*/
+     /*width: 60%;*/
+     /*margin-left: 20px;*/
+     /*list-style: none;*/
+ /*}*/
+
+/*.carousel-indicators li{*/
+    /*!*margin-left: 110px;*!*/
+/*}*/
 
 /*!* Change the link color to #111 (black) on hover *!*/
 /*li a:hover {*/

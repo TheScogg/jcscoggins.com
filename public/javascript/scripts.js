@@ -24,6 +24,7 @@ $(document).ready(function (){
             // If class contains fa-home, fa-spinner, etc...
             // Assign particular icon to variable
             var $icon = $(this).find("i");
+            console.log($icon)
             iconColor($icon, $(".nav").children());
         },
         function () {
@@ -31,9 +32,10 @@ $(document).ready(function (){
         }
     );
 
-    //Attempt to automatically assign colors to links in proper order
-    links = ($(".nav li").children());
-    for (link in links) {
+    console.log($("a").attr("href"));
 
-    }
+    $('.carousel').carousel({
+        interval:2000
+    })
+
 });
