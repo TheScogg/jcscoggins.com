@@ -31,7 +31,8 @@ li {
 
 
 li:last-child {
-    border-right: none;
+    border-right: 0;
+    color: white;
 }
 
 li a {
@@ -42,14 +43,15 @@ li a {
     text-decoration: none;
 }
 
-.nav li a:hover {
+.navigationBar li a:hover {
     background-color: #292929;
     color: #e7feff;
     border-radius: 10px;
+    text-decoration: none;
 }
 
 /* Overwriting Bootstrap defaults */
-.nav > li > a:focus {
+.navigationBar > li > a:focus {
     background-color: green;
     color: white;
 }
@@ -61,10 +63,6 @@ li a {
     color: #fff;
     text-shadow: 1px 1px 1px #ccc;
     font-size: 2.5em;}
-
-/*.fa:hover {*/
-    /*color: cyan;*/
-/*}*/
 
 /* User Dropdown */
 .userDropdown {
@@ -100,40 +98,3 @@ li a {
     background-color: dimgrey;
 }
 
-/* CAROUSEL */
-/*.left.carousel-control {*/
-    /*border-radius: 10px 0 0 10px;*/
-/*}*/
-
-/*.right.carousel-control {*/
-    /*border-radius: 0px 10px 10px 0px;*/
-/*}*/
-
-/*.carousel-indicators {*/
-     /*position: absolute;*/
-     /*bottom: 10px;*/
-     /*left: 0;*/
-     /*right: 0;*/
-     /*text-align: center;*/
-     /*z-index: 15;*/
-     /*width: 60%;*/
-     /*margin-left: 20px;*/
-     /*list-style: none;*/
- /*}*/
-
-/*.carousel-indicators li{*/
-    /*!*margin-left: 110px;*!*/
-/*}*/
-
-/*!* Change the link color to #111 (black) on hover *!*/
-/*li a:hover {*/
-    /*background-color: #000000;*/
-    /*text-decoration: none;*/
-    /*color: #d7dde5;*/
-/*}*/
-
-/* My Name is James Intro */
-/*.intro > p {*/
-    /*color: white;*/
-    /*!*font-size: 24px;*!*/
-/*}*/

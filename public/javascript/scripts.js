@@ -19,13 +19,13 @@ $(document).ready(function (){
     }
 
   // Color navbar icons when hovering over navbar sections
-    $(".nav li").hover(
+    $(".navigationBar li").hover(
         function () {
             // If class contains fa-home, fa-spinner, etc...
             // Assign particular icon to variable
             var $icon = $(this).find("i");
             console.log($icon)
-            iconColor($icon, $(".nav").children());
+            iconColor($icon, $(".navigationBar").children());
         },
         function () {
             $(this).find("i").css("color", "white");
