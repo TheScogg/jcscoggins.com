@@ -1,5 +1,5 @@
 $(document).ready(function (){
-  // Toggle 'My Account' and 'Logout' options when clicking username in navbar
+    // Toggle 'My Account' and 'Logout' options when clicking username in navbar
     $(".username").click(function () {
       $(".userDropdown").slideToggle();
     });
@@ -18,14 +18,14 @@ $(document).ready(function (){
         $icon.css("color", navColorArray[navIndex % navColorArray.length]);
     }
 
-  // Color navbar icons when hovering over navbar sections
-    $(".navigationBar li").hover(
+    // Color navbar icons when hovering over navbar sections
+    $(".nav li").hover(
         function () {
             // If class contains fa-home, fa-spinner, etc...
             // Assign particular icon to variable
             var $icon = $(this).find("i");
             console.log($icon)
-            iconColor($icon, $(".navigationBar").children());
+            iconColor($icon, $(".nav").children());
         },
         function () {
             $(this).find("i").css("color", "white");
@@ -34,6 +34,7 @@ $(document).ready(function (){
 
     console.log($("a").attr("href"));
 
+    // Control front page carousel
     $('.carousel').carousel({
         interval:2000
     })

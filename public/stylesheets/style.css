@@ -43,7 +43,7 @@ li a {
     text-decoration: none;
 }
 
-.navigationBar li a:hover {
+.nav li a:hover {
     background-color: #292929;
     color: #e7feff;
     border-radius: 10px;
@@ -51,7 +51,7 @@ li a {
 }
 
 /* Overwriting Bootstrap defaults */
-.navigationBar > li > a:focus {
+.nav > li > a:focus {
     /*background-color: green;*/
     color: white;
 }
@@ -67,10 +67,10 @@ li a {
 /* User Dropdown */
 .userDropdown {
     display: none;
-    background-color: #e8fcff;
+    background-color: #292929;
     float: right;
-    position: absolute;
-    margin-top: 10px;
+    position: relative;
+    margin-top: 40px;
     right: 15px;
     border-radius: 10px;
     z-index: 2;
@@ -81,6 +81,7 @@ li a {
     clear: both;
     border-bottom: 2px dotted dimgrey;
     width: 100%;
+    border-right: none;
 }
 
 .userDropdown li:last-child {
@@ -89,7 +90,7 @@ li a {
 
 .userDropdown li a {
     display: block;
-    color: black;
+    color: white;
     text-decoration: none;
     text-align: right;
 }

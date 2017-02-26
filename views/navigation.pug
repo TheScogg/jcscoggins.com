@@ -26,36 +26,37 @@ html
     .container
         .row
             .col-lg-12.col-xs-12
-                ul.navigationBar
-                    li.float-left
-                        a(href='/home') Home
+                ul.nav.justify-content-left(style="display:inline;")
+                    li.nav-item
+                        a.nav-link(href='/home') Home
                             i.fa.fa-home(aria-hidden="true", style="font-size:1.2em")
-                    li
-                        a(href='/projects') Projects
+                    li.nav-item
+                        a.nav-link(href='/projects') Projects
                             i.fa.fa-spinner(aria-hidden="true", style="font-size:1.2em")
-                    li
-                        a(href='/music') Music
+                    li.nav-item
+                        a.nav-link(href='/music') Music
                             i.fa.fa-music(aria-hidden="true", style="font-size:1.2em")
-                    li
-                        a(href='/contact') Contact
+                    li.nav-item
+                        a.nav-link(href='/contact') Contact
                             i.fa.fa-envelope(aria-hidden="true", style="font-size:1.2em")
-                    li.float-right
+                ul.nav.justify-content-end(style="float:right;")
+                    li.nav-item
                       if (user)
-                        a.username #{user.username}
+                        a.username.nav-link #{user.username}
                             i.fa.fa-user(aria-hidden="true", style="font-size:1.2em")
                         //- ul(data-role='list-view')
                         //-   li
                         //-     a(href='/myAccount') My Account
                         //-     a(href='/logout') Log Out
                       if (!user)
-                        a(href='/loginportal') Log In
+                        a.nav-link(href='/loginportal') Log In
                             i.fa.fa-user(aria-hidden="true", style="font-size:1.2em")
 
 
                 ul.userDropdown
-                    li
+                    li.nav-item
                         a(href="/myAccount") My Account
-                    li
+                    li.nav-item
                         a(href="/logout") Logout
     block content
 
