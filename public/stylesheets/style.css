@@ -4,6 +4,10 @@ body {
   background-color: #393939;
 }
 
+.container {
+
+}
+
 .col-centered{
     float: none;
     margin: 0 auto;
@@ -98,4 +102,3 @@ li a {
 .userDropdown li:hover {
     background-color: dimgrey;
 }
-
