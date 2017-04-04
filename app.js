@@ -46,7 +46,7 @@ passport.deserializeUser(Account.deserializeUser());
 
 // mongoose
 // mongoose.connect('mongodb://localhost/passport_local_mongoose_express4');
-mongoose.connect('mongodb://TheScogg:fogerty21@ds147069.mlab.com:47069/playlistify');
+mongoose.connect('mongodb://TheScogg:fogerty21@ds149700.mlab.com:49700/myworld');
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

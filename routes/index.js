@@ -9,23 +9,19 @@ router.get('/', (req,res) => {
 })
 
 router.get('/home', (req, res) => {
-    res.render('index', { });
+    res.render('index', {user: req.user});
 });
 
 router.get('/projects', (req, res) => {
-    res.render('projects', { });
-});
-
-router.get('/projects', (req, res) => {
-    res.render('projects', { });
+    res.render('projects', {user: req.user});
 });
 
 router.get('/music', (req, res) => {
-    res.render('music', { });
+    res.render('music', {user: req.user});
 });
 
 router.get('/contact', (req, res) => {
-    res.render('contact', { });
+    res.render('contact', {user: req.user});
 });
 
 router.get('/loginportal', (req, res) => {
