@@ -7,7 +7,9 @@ $(document).ready(function (){
     $(".navigationBar a.navButton").click(function () {
       console.log($(this).attr("href"));
       event.preventDefault();
-      $(".projectsDropdown").slideToggle();
+      var test = "." + $(this).attr("href").substr(1) + "Dropdown";
+      console.log(test);
+      $(test).slideToggle();
     });
 
     // Dynamically Color Icons
