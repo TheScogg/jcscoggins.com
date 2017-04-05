@@ -24,6 +24,11 @@ router.get('/contact', (req, res) => {
     res.render('contact', {user: req.user});
 });
 
+router.get('/myWorld', (req, res) => {
+    res.render('myWorld', {user: req.user});
+});
+
+
 router.get('/loginportal', (req, res) => {
     res.render('loginportal', { user : req.user });
 });
