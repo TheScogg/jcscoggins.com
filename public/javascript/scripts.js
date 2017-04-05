@@ -4,6 +4,12 @@ $(document).ready(function (){
       $(".userDropdown").slideToggle();
     });
 
+    $(".navigationBar a.navButton").click(function () {
+      console.log($(this).attr("href"));
+      event.preventDefault();
+      $(".projectsDropdown").slideToggle();
+    });
+
     // Dynamically Color Icons
     function iconColor ($icon, navLists) {
         var navColorArray = ["red","orange","yellow","green","blue","purple"];

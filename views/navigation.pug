@@ -31,13 +31,13 @@ html
                         a(href='/home') Home
                             i.fa.fa-home(aria-hidden="true", style="font-size:1.2em")
                     li
-                        a(href='/projects') Projects
+                        a.navButton(href='/projects') Projects
                             i.fa.fa-spinner(aria-hidden="true", style="font-size:1.2em")
                     li
-                        a(href='/music') My Music
+                        a.navButton(href='/music') My Music
                             i.fa.fa-music(aria-hidden="true", style="font-size:1.2em")
                     li
-                        a(href='/contact') Contact
+                        a.navButton(href='/contact') Contact
                             i.fa.fa-envelope(aria-hidden="true", style="font-size:1.2em")
                     li.float-right
                       if (user)
@@ -51,10 +51,25 @@ html
                         a(href='/loginportal') Log In
                             i.fa.fa-user(aria-hidden="true", style="font-size:1.2em")
 
-
                 ul.userDropdown
                     li
                         a(href="/myAccount") My Account
                     li
                         a(href="/logout") Logout
+        .row    
+            .col-lg-12.col-xs-12
+                ul.projectsDropdown
+                    li
+                        a(href="http://lifelogs.herokuapp.com") LifeLogs
+                    li
+                        a(href="/logout") MyWorld
+                ul.musicDropdown
+                    li
+                        a(href="https://chrisscoggins.bandcamp.com/") BandCamp
+                    li
+                        a(href="http://www.reverbnation.com/theamericanpsychedelics") ReverbNation
+                    li
+                        a(href="https://soundcloud.com/thescogg") SoundCloud
+
+
     block content
