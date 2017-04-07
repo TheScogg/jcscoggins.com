@@ -9,7 +9,7 @@ $(document).ready(function (){
       event.preventDefault();
       var test = "." + $(this).attr("href").substr(1) + "Dropdown";
       console.log(test);
-      $(test).slideToggle();
+      $(test).toggle("slide", {direction:'left'});
     });
 
     // Dynamically Color Icons

@@ -54,6 +54,7 @@ li a {
 .navigationBar > li > a:focus {
     /*background-color: green;*/
     color: white;
+    text-decoration: none;
 }
 
 /* ICONS - Navbar */
@@ -103,4 +104,17 @@ li a {
   float: left;
   position: inherit;
   margin-left: 20px;
+  border-radius : 0 10px 10px 0;
+    /*background-color: black;*/
+}
+
+.projectsDropdown li a {
+    /*color: white;*/
+}
+
+/* Game (myWorld) Canvas */
+canvas {
+    display : block;
+    margin : auto;
+    margin-top: 50px;
 }
