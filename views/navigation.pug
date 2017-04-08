@@ -57,20 +57,22 @@ html
                         a(href="/myAccount") My Account
                     li
                         a(href="/logout") Logout
-        .row    
-            .col-lg-12.col-xs-12
-                ul.projectsDropdown
-                    li
-                        a(href="http://lifelogs.herokuapp.com") LifeLogs
-                    li
-                        a(href="/myWorld") MyWorld
-                ul.musicDropdown
-                    li
-                        a(href="https://chrisscoggins.bandcamp.com/") BandCamp
-                    li
-                        a(href="http://www.reverbnation.com/theamericanpsychedelics") ReverbNation
-                    li
-                        a(href="https://soundcloud.com/thescogg") SoundCloud
+        .row
+            .col-lg-12.col-xs-12(style="float:left;")
+                div.dropdown
+                    ul.projectsDropdown
+                        li
+                            a(href="http://lifelogs.herokuapp.com") LifeLogs
+                        li
+                            a(href="/myWorld") MyWorld
+                div.dropdown
+                    ul.musicDropdown
+                        li
+                            a(href="https://chrisscoggins.bandcamp.com/") BandCamp
+                        li
+                            a(href="http://www.reverbnation.com/theamericanpsychedelics") ReverbNation
+                        li
+                            a(href="https://soundcloud.com/thescogg") SoundCloud
 
 
     block content

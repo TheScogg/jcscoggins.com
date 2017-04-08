@@ -102,8 +102,9 @@ li a {
 
 .projectsDropdown, .musicDropdown {
   float: left;
-  position: inherit;
-  margin-left: 20px;
+  position: absolute;
+  /*margin-left: 20px;*/
+    left: 0;
   border-radius : 0 10px 10px 0;
     /*background-color: black;*/
 }

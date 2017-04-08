@@ -4,12 +4,15 @@ $(document).ready(function (){
       $(".userDropdown").slideToggle();
     });
 
+    // Toggle navbar dropdown elements
     $(".navigationBar a.navButton").click(function () {
-      console.log($(this).attr("href"));
-      event.preventDefault();
-      var test = "." + $(this).attr("href").substr(1) + "Dropdown";
-      console.log(test);
-      $(test).toggle("slide", {direction:'left'});
+          event.preventDefault();
+
+          // iterate through all navButtons & display:none to start with fresh slate
+        console.log($(".dropdown").children().hide());
+
+          var dropdown = "." + $(this).attr("href").substr(1) + "Dropdown";
+          $(dropdown).toggle("slide", {direction:'left'});
     });
 
     // Dynamically Color Icons
