@@ -9,6 +9,8 @@ $(document).ready(function (){
           event.preventDefault();
 
           // iterate through all navButtons & display:none to start with fresh slate
+        // if ($(".dropdown").children().css("display") === "block");
+        console.log(this);
         console.log($(".dropdown").children().hide());
 
           var dropdown = "." + $(this).attr("href").substr(1) + "Dropdown";

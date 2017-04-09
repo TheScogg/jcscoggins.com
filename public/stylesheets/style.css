@@ -43,6 +43,11 @@ li a {
     text-decoration: none;
 }
 
+.navigationBar {
+    float: left;
+    /*background-color: black;*/
+}
+
 .navigationBar li a:hover {
     background-color: #292929;
     color: #e7feff;
@@ -70,7 +75,7 @@ li a {
     display: none;
     background-color: #e8fcff;
     float: right;
-    position: absolute;
+    position: relative;
     margin-top: 10px;
     right: 15px;
     border-radius: 10px;
@@ -102,7 +107,7 @@ li a {
 
 .projectsDropdown, .musicDropdown {
   float: left;
-  position: absolute;
+  position: relative;
   /*margin-left: 20px;*/
     left: 0;
   border-radius : 0 10px 10px 0;
