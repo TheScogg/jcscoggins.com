@@ -6,22 +6,27 @@ $(document).ready(function () {
       constructor(name, size, biome) {
         this.name = name;
         this.size = size;
+        // Temperate, Desert, Arctic, etc. Just start working on temperate first though.
         this.biome = biome;
       }
 
       buildMap() {
         var mapArray = [];
+
+        // Map object holding all tile coordinates and tile properties
         var mapObject = {};
         var tiles = ["water", "forest", "grassland", "mountain"];
+
+        // ROW
         for (var i = 0; i < this.size[0] ; i++) {
-            var name = i;
+            // mapObject[0] thru mapObject[height of map]
             mapObject[i] = [];
+
+            // Each individual cell in any particular row
             for (var j = 0; j < this.size[1]; j++) {
                 mapObject[i].push({x : j, biome : tiles[j%4]});
             }
         }
-        console.log(mapObject);
-        var myKey = "BILL";
 
 
       }

@@ -16,6 +16,18 @@ a {
 
 
 /* NAVBAR */
+.logo {
+    background-color: black;
+    height:110px;
+    width:135px;
+    display:inline-block;
+    position:relative;
+    float:left;
+    border:2px solid white;
+    border-radius: 0 25px 0 0;
+    padding: 5px;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -44,7 +56,7 @@ li a {
 }
 
 .navigationBar {
-    float: left;
+    /*float: left;*/
     /*background-color: black;*/
 }
 
@@ -96,12 +108,14 @@ li a {
 .userDropdown li a, .projectsDropdown li a, .musicDropdown li a {
     display: block;
     color: black;
+    /*background-color: green;*/
     text-decoration: none;
     text-align: right;
 }
 
-.userDropdown li:hover {
-    background-color: dimgrey;
+.userDropdown li:hover, .projectsDropdown li a:hover, .musicDropdown li a:hover {
+    background-color: rgba(0, 0, 0, 0.88);
+    color: white;
 }
 
 

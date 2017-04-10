@@ -8,13 +8,12 @@ $(document).ready(function (){
     $(".navigationBar a.navButton").click(function () {
           event.preventDefault();
 
-          // iterate through all navButtons & display:none to start with fresh slate
-        // if ($(".dropdown").children().css("display") === "block");
-        console.log(this);
-        console.log($(".dropdown").children().hide());
-
+        /* FIX: Don't allow multipe submenus to be open at once! */
           var dropdown = "." + $(this).attr("href").substr(1) + "Dropdown";
-          $(dropdown).toggle("slide", {direction:'left'});
+        $(dropdown).siblings().hide();
+
+        $(dropdown).toggle("slide", {direction:'left'});
+
     });
 
     // Dynamically Color Icons
@@ -37,7 +36,7 @@ $(document).ready(function (){
             // If class contains fa-home, fa-spinner, etc...
             // Assign particular icon to variable
             var $icon = $(this).find("i");
-            console.log($icon)
+            // console.log($icon)
             iconColor($icon, $(".navigationBar").children());
         },
         function () {
