@@ -5,14 +5,14 @@ $(document).ready(function (){
     });
 
     // Toggle navbar dropdown elements
-    $(".navigationBar a.navButton").click(function () {
+    $(".navigationBar a.navButton").click(function (event) {
           event.preventDefault();
 
         /* FIX: Don't allow multipe submenus to be open at once! */
           var dropdown = "." + $(this).attr("href").substr(1) + "Dropdown";
         $(dropdown).siblings().hide();
 
-        $(dropdown).toggle("slide", {direction:'left'});
+        $(dropdown).toggle("slide", {direction:"left"});
 
     });
 
@@ -46,7 +46,7 @@ $(document).ready(function (){
 
     console.log($("a").attr("href"));
 
-    $('.carousel').carousel({
+    $(".carousel").carousel({
         interval:2000
     })
 
