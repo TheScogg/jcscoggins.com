@@ -143,6 +143,10 @@ li a {
     /*color: white;*/
 }
 
+.mobileNavbar {
+    display: none;
+}
+
 /* Game (myWorld) Canvas */
 canvas {
     display : block;
@@ -201,7 +205,30 @@ canvas {
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
+    .fa-5x {
+        font-size: 3em;
+        display: block;
+        text-align: center;
+        /*background-color: green;*/
+        /*width: 50%;*/
+    }
 
+    .mobileNavRow span {
+        display: block;
+        color: white;
+        text-align: center;
+        font-size: .25em;
+        font-family: sans-serif;
+    }
+
+    .mobileNavCol {
+        text-align: center;
+    }
+
+    .mobileNavRow {
+        /*background-color: black;*/
+
+    }
 }
 
 /* Extra Small Devices, Phones */

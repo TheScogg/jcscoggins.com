@@ -25,6 +25,33 @@ html
       br
 
     .container
+        .row.mobileNavRow
+            .col-xs-2.mobileNavCol.col-centered
+                .fa.fa-home.fa-5x(aria-hidden="true" style="color:cyan;")
+                    span Home
+            .col-xs-2.mobileNavCol.col-centered.col-centered
+                .fa.fa-spinner.fa-5x(aria-hidden="true" style="color:magenta;")
+                    span Projects
+            .col-xs-2.mobileNavCol.col-centered
+                .fa.fa-music.fa-5x(aria-hidden="true" style="color:yellow;")
+                    span My Music
+            .col-xs-2.mobileNavCol.col-centered
+                .fa.fa-envelope.fa-5x(aria-hidden="true" style="color:green;")
+                    span Contact
+            .col-xs-2.mobileNavCol.col-centered
+                if (user)
+                    i.fa.fa-user.fa-5x(aria-hidden="true" style="color:orange;")
+                        span .username #{user.username}
+                    //- ul(data-role='list-view')
+                    //-   li
+                    //-     a(href='/myAccount') My Account
+                    //-     a(href='/logout') Log Out
+                if (!user)
+                    i.fa.fa-user.fa-5x(aria-hidden="true" style="color:orange;")
+                        span Log In
+                        //a(href='/loginportal') Log In
+
+
         .row
             .col-lg-12.col-xs-12
                 img.logo(src="/img/logo.jpg" alt="James Scoggins")
@@ -35,7 +62,7 @@ html
                             i.fa.fa-home(aria-hidden="true", style="font-size:1.2em")
                     li
                         a.navButton(href='/projects') Projects
-                            i.fa.fa-spinner(aria-hidden="true", style="font-size:1.2em")
+                            i.fa.fa-spinner.fa-5x(aria-hidden="true", style="font-size:1.2em")
                     li
                         a.navButton(href='/music') My Music
                             i.fa.fa-music(aria-hidden="true", style="font-size:1.2em")
