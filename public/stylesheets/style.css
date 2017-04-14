@@ -48,26 +48,31 @@ li {
     border-right: 1px solid #bbb;
 }
 
-
 li:last-child {
     border-right: 0;
-    color: white;
+    color: red;
 }
 
-li a {
+a.navButton  {
     display: block;
     color: #aeaeae;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    float:left;
 }
 
-.navigationBar {
-    /*float: left;*/
+a.navButton span {
+    margin-left: 15px;
+    font-family: sans-serif;
+}
+
+.navigationBar li:last-child {
+    float: right;
     /*background-color: black;*/
 }
 
-.navigationBar li a:hover {
+.navButton:hover {
     background-color: #292929;
     color: #e7feff;
     border-radius: 10px;
@@ -103,6 +108,9 @@ li a {
     right: 15px;
     border-radius: 10px;
     z-index: 2;
+    font-family: sans-serif;
+    font-size: 1.5em;
+    padding: 5px;
 }
 
 .userDropdown li {
@@ -129,7 +137,6 @@ li a {
     color: white;
 }
 
-
 .projectsDropdown, .musicDropdown {
   float: left;
   position: relative;
@@ -147,12 +154,18 @@ li a {
     display: none;
 }
 
+
+
 /* Game (myWorld) Canvas */
 canvas {
     display : block;
     margin : auto;
     margin-top: 50px;
 }
+
+
+
+
 
 
 /*==================================================
@@ -205,29 +218,37 @@ canvas {
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
-    .fa-5x {
-        font-size: 3em;
-        display: block;
-        text-align: center;
-        /*background-color: green;*/
-        /*width: 50%;*/
+
+    .logo {
+        display: none;
     }
 
-    .mobileNavRow span {
-        display: block;
-        color: white;
-        text-align: center;
-        font-size: .25em;
-        font-family: sans-serif;
-    }
-
-    .mobileNavCol {
-        text-align: center;
-    }
-
-    .mobileNavRow {
+    .navigationBar li:last-child {
+        float: left;
         /*background-color: black;*/
+    }
 
+    a.navButton {
+        display:inline-block;
+        width: auto;
+        float:left;
+        text-align:center;
+    }
+
+    a.navButton i,
+    a.navButton span {
+        display:block;
+        /*width:100%;*/
+        clear:both;
+        margin: 0;
+    }
+
+    a.navButton span {
+        margin-top: 5px;
+    }
+
+    .userName {
+        float: left;
     }
 }
 

@@ -26,30 +26,30 @@ html
 
     .container
         .row.mobileNavRow
-            .col-xs-2.mobileNavCol.col-centered
-                .fa.fa-home.fa-5x(aria-hidden="true" style="color:cyan;")
-                    span Home
-            .col-xs-2.mobileNavCol.col-centered.col-centered
-                .fa.fa-spinner.fa-5x(aria-hidden="true" style="color:magenta;")
-                    span Projects
-            .col-xs-2.mobileNavCol.col-centered
-                .fa.fa-music.fa-5x(aria-hidden="true" style="color:yellow;")
-                    span My Music
-            .col-xs-2.mobileNavCol.col-centered
-                .fa.fa-envelope.fa-5x(aria-hidden="true" style="color:green;")
-                    span Contact
-            .col-xs-2.mobileNavCol.col-centered
-                if (user)
-                    i.fa.fa-user.fa-5x(aria-hidden="true" style="color:orange;")
-                        span .username #{user.username}
-                    //- ul(data-role='list-view')
-                    //-   li
-                    //-     a(href='/myAccount') My Account
-                    //-     a(href='/logout') Log Out
-                if (!user)
-                    i.fa.fa-user.fa-5x(aria-hidden="true" style="color:orange;")
-                        span Log In
-                        //a(href='/loginportal') Log In
+            //.col-xs-2.mobileNavCol.col-centered
+            //    .fa.fa-home.fa-5x(aria-hidden="true" style="color:cyan;")
+            //        span Home
+            //.col-xs-2.mobileNavCol.col-centered.col-centered
+            //    .fa.fa-spinner.fa-5x(aria-hidden="true" style="color:magenta;")
+            //        span Projects
+            //.col-xs-2.mobileNavCol.col-centered
+            //    .fa.fa-music.fa-5x(aria-hidden="true" style="color:yellow;")
+            //        span My Music
+            //.col-xs-2.mobileNavCol.col-centered
+            //    .fa.fa-envelope.fa-5x(aria-hidden="true" style="color:green;")
+            //        span Contact
+            //.col-xs-2.mobileNavCol.col-centered
+            //    if (user)
+            //        i.fa.fa-user.fa-5x(aria-hidden="true" style="color:orange;")
+            //            span .username #{user.username}
+            //        //- ul(data-role='list-view')
+            //        //-   li
+            //        //-     a(href='/myAccount') My Account
+            //        //-     a(href='/logout') Log Out
+            //    if (!user)
+            //        i.fa.fa-user.fa-5x(aria-hidden="true" style="color:orange;")
+            //            span Log In
+            //            //a(href='/loginportal') Log In
 
 
         .row
@@ -57,29 +57,35 @@ html
                 img.logo(src="/img/logo.jpg" alt="James Scoggins")
 
                 ul.navigationBar
-                    li.float-left
-                        a(href='/home') Home
+                    li
+                        a.navButton(href='/home')
                             i.fa.fa-home(aria-hidden="true", style="font-size:1.2em")
+                                span Home
                     li
-                        a.navButton(href='/projects') Projects
-                            i.fa.fa-spinner.fa-5x(aria-hidden="true", style="font-size:1.2em")
+                        a.navButton(href='/projects')
+                            i.fa.fa-spinner(aria-hidden="true", style="font-size:1.2em")
+                                span Projects
                     li
-                        a.navButton(href='/music') My Music
+                        a.navButton(href='/music')
                             i.fa.fa-music(aria-hidden="true", style="font-size:1.2em")
+                                span Music
                     li
-                        a.navButton(href='/contact') Contact
+                        a.navButton(href='/contact')
                             i.fa.fa-envelope(aria-hidden="true", style="font-size:1.2em")
-                    li.float-right
+                                span Contact
+                    li
                       if (user)
-                        a.username #{user.username}
+                        a.username.navButton
                             i.fa.fa-user(aria-hidden="true", style="font-size:1.2em")
+                                span #{user.username}
                         //- ul(data-role='list-view')
                         //-   li
                         //-     a(href='/myAccount') My Account
                         //-     a(href='/logout') Log Out
                       if (!user)
-                        a(href='/loginportal') Log In
+                        a.navButton(href='/loginportal')
                             i.fa.fa-user(aria-hidden="true", style="font-size:1.2em")
+                                span Log In
 
                 ul.userDropdown
                     li
@@ -99,6 +105,8 @@ html
                             a(href="http://www.reverbnation.com/theamericanpsychedelics" target='_blank') ReverbNation
                         li
                             a(href="https://soundcloud.com/thescogg" target='_blank') SoundCloud
+
+
 
 
     block content

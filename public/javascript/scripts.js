@@ -25,6 +25,7 @@ $(document).ready(function (){
             // Search through all font-awesome icon classes
             if ($(navLists[i]).find("i").attr("class").split(' ')[1] === $icon.attr("class").split(' ')[1]) {navIndex = i};
             $icon.css("color", navColorArray[i]);
+            console.log($icon.find("span").css("color", "white"));
         }
 
         $icon.css("color", navColorArray[navIndex % navColorArray.length]);
