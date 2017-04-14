@@ -32,24 +32,24 @@ html
                 ul.navigationBar
                     li
                         a.navButton(href='/home')
-                            i.fa.fa-home(aria-hidden="true", style="font-size:1.2em")
+                            i.fa.fa-home(aria-hidden="true")
                                 span Home
                     li
                         a.navButton(href='/projects')
-                            i.fa.fa-spinner(aria-hidden="true", style="font-size:1.2em")
+                            i.fa.fa-spinner(aria-hidden="true")
                                 span Projects
                     li
                         a.navButton(href='/music')
-                            i.fa.fa-music(aria-hidden="true", style="font-size:1.2em")
+                            i.fa.fa-music(aria-hidden="true")
                                 span Music
                     li
                         a.navButton(href='/contact')
-                            i.fa.fa-envelope(aria-hidden="true", style="font-size:1.2em")
+                            i.fa.fa-envelope(aria-hidden="true")
                                 span Contact
                     li
                       if (user)
                         a.username.navButton
-                            i.fa.fa-user(aria-hidden="true", style="font-size:1.2em")
+                            i.fa.fa-user(aria-hidden="true")
                                 span #{user.username}
                         //- ul(data-role='list-view')
                         //-   li
@@ -57,7 +57,7 @@ html
                         //-     a(href='/logout') Log Out
                       if (!user)
                         a.navButton(href='/loginportal')
-                            i.fa.fa-user(aria-hidden="true", style="font-size:1.2em")
+                            i.fa.fa-user(aria-hidden="true")
                                 span Log In
 
                 ul.userDropdown

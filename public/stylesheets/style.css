@@ -226,6 +226,15 @@ canvas {
         display: none;
     }
 
+    .navigationBar {
+        width: 100%;
+    }
+
+    .navigationBar li{
+        width: 20%;
+        border-right: none;
+    }
+
     .navigationBar li:last-child {
         float: left;
         /*background-color: black;*/
@@ -233,7 +242,7 @@ canvas {
 
     a.navButton {
         display:inline-block;
-        width: auto;
+        width: inherit;
         float:left;
         text-align:center;
     }
@@ -241,18 +250,26 @@ canvas {
     a.navButton i,
     a.navButton span {
         display:block;
-        /*width:100%;*/
+        width:100%;
         clear:both;
         margin: 0;
     }
 
     a.navButton span {
+        /*font-size: .5em;*/
+        display: none;
         margin-top: 5px;
+    }
+
+    .fa:before {
+        font-size:3em;
     }
 
     .userName {
         float: left;
     }
+
+
 }
 
 /* Extra Small Devices, Phones */
