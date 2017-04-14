@@ -64,7 +64,8 @@ a.navButton  {
 
 a.navButton span {
     margin-left: 15px;
-    font-family: sans-serif;
+    font-family: 'Palanquin Dark', sans-serif;
+    font-size: 1em;
 }
 
 .navigationBar li:last-child {
@@ -104,13 +105,12 @@ a.navButton span {
     background-color: #e8fcff;
     float: right;
     position: relative;
-    margin-top: 10px;
-    right: 15px;
+    top: 15px;
     border-radius: 10px;
     z-index: 2;
-    font-family: sans-serif;
-    font-size: 1.5em;
-    padding: 5px;
+    font-family: 'Palanquin Dark', sans-serif;
+    font-size: 1em;
+    /*padding: 5px;*/
 }
 
 .userDropdown li {
@@ -130,6 +130,9 @@ a.navButton span {
     /*background-color: green;*/
     text-decoration: none;
     text-align: right;
+    /*margin: 0 5px 0 5px;*/
+    font-size: 1.2em;
+    padding: 10px;
 }
 
 .userDropdown li:hover, .projectsDropdown li a:hover, .musicDropdown li a:hover {

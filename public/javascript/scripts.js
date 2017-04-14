@@ -6,13 +6,17 @@ $(document).ready(function (){
 
     // Toggle navbar dropdown elements
     $(".navigationBar a.navButton").click(function (event) {
-          event.preventDefault();
 
-        /* FIX: Don't allow multipe submenus to be open at once! */
+        /* Find corresponding .dropdown list for any button click with dropdown menu */
           var dropdown = "." + $(this).attr("href").substr(1) + "Dropdown";
         $(dropdown).siblings().hide();
-
         $(dropdown).toggle("slide", {direction:"left"});
+
+        // Check to see if nav button has a dropdown or not - hacky, but it works.
+        if ($("html").find(dropdown).length > 0) {
+            event.preventDefault();
+        }
+
 
     });
 
@@ -25,7 +29,7 @@ $(document).ready(function (){
             // Search through all font-awesome icon classes
             if ($(navLists[i]).find("i").attr("class").split(' ')[1] === $icon.attr("class").split(' ')[1]) {navIndex = i};
             $icon.css("color", navColorArray[i]);
-            console.log($icon.find("span").css("color", "white"));
+            $icon.find("span").css("color", "white");
         }
 
         $icon.css("color", navColorArray[navIndex % navColorArray.length]);
