@@ -53,6 +53,11 @@ $(document).ready(function (){
     console.log($(window).width());
     if ($(window).width() <= 768) {
         var $icon = $(".navigationBar li").find("i");
+
+            for (var i = 0; i < $icon.length; i ++) {
+            //Find a way to send the icons over one at a time, instead of as a group
+        }
+
         iconColor($icon, $(".navigationBar").children());
         console.log($icon);
     }
