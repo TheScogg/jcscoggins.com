@@ -16,13 +16,13 @@ $(document).ready(function (){
         if ($("html").find(dropdown).length > 0) {
             event.preventDefault();
         }
-
-
     });
 
     // Dynamically Color Icons
     function iconColor ($icon, navLists) {
-        var navColorArray = ["red","orange","yellow","green","blue","purple"];
+
+        // console.log(navLists);
+        var navColorArray = ["#C23B22","#FFB347","#FDFD96","#03C03C","#779ECB","#B19CD9"];
         var navIndex;
 
         for (var i = 0; i < navLists.length; i++) {
@@ -48,6 +48,15 @@ $(document).ready(function (){
             $(this).find("i").css("color", "white");
         }
     );
+
+    // Color navbar icons automatically on mobile
+    console.log($(window).width());
+    if ($(window).width() <= 768) {
+        var $icon = $(".navigationBar li").find("i");
+        iconColor($icon, $(".navigationBar").children());
+        console.log($icon);
+    }
+
 
     console.log($("a").attr("href"));
 

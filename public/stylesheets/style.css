@@ -6,7 +6,7 @@ body {
 }
 
 .container {
-    background-color: #393939;
+    /*background-color: #393939;*/
     padding-top: 15px;
 
 }
@@ -65,7 +65,7 @@ a.navButton  {
 a.navButton span {
     margin-left: 15px;
     font-family: 'Palanquin Dark', sans-serif;
-    font-size: 1em;
+    font-size: 1.2em;
 }
 
 .navigationBar li:last-child {
@@ -242,7 +242,7 @@ canvas {
 
     a.navButton {
         display:inline-block;
-        width: inherit;
+        width: 100%;
         float:left;
         text-align:center;
     }
@@ -250,15 +250,22 @@ canvas {
     a.navButton i,
     a.navButton span {
         display:block;
-        width:100%;
+        /*width:100%;*/
         clear:both;
         margin: 0;
+        font-size: 3.5vw;
+        /*text-align: center;*/
     }
 
     a.navButton span {
         /*font-size: .5em;*/
         display: none;
         margin-top: 5px;
+    }
+
+    a.navButton:hover {
+        background-color: black;
+        width: 100;
     }
 
     .fa:before {
@@ -269,6 +276,13 @@ canvas {
         float: left;
     }
 
+    .musicDropdown a {
+        font-size: 1.3vw;
+    }
+
+    .dropdown li a {
+        font-size: 4vw;
+    }
 
 }
 
