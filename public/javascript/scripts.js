@@ -7,17 +7,29 @@ $(document).ready(function (){
     });
 
     // Toggle navbar dropdown elements
-    $(".navigationBar a.navButton").click(function (event) {
+    $(".navButton").on("click", function (event) {
 
         /* Find corresponding .dropdown list for any button click with dropdown menu */
           var dropdown = "." + $(this).attr("href").substr(1) + "Dropdown";
         $(dropdown).siblings().hide();
         $(dropdown).toggle("slide", {direction:"left"});
-
         // Check to see if nav button has a dropdown or not - hacky, but it works.
         if ($("html").find(dropdown).length > 0) {
             event.preventDefault();
         }
+    });
+
+    // Slide submenus back in when you click outside element
+    $(window).click(function() {
+        //Hide the menus if visible
+        var dropdownChildren = $(".dropdown").children();
+        $(dropdownChildren.filter(":visible")).toggle("slide", {direction:"left"});
+        // $(dropdown).toggle("slide", {direction:"left"});
+    });
+
+    // Prevent code from further up the DOM propagating to this specific element
+    $('.navButton').click(function(event){
+        event.stopPropagation();
     });
 
     // Dynamically Color Icons
