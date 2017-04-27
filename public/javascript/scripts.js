@@ -1,4 +1,5 @@
 $(document).ready(function (){
+    // Check if being accessed from phone
     var isMobile = false;
 
   // Toggle 'My Account' and 'Logout' options when clicking username in navbar
@@ -69,7 +70,6 @@ $(document).ready(function (){
     );
 
     // Color navbar icons automatically on mobile
-    console.log($(window).width());
     if ($(window).width() <= 768) {
         isMobile = true;
 
@@ -82,6 +82,8 @@ $(document).ready(function (){
             iconColor($($icon[i]), $(".navigationBar").children());
         }
 
+        var thisPage = ($(location).attr("href"));
+        console.log(thisPage);
     }
 
 
