@@ -2,6 +2,19 @@ $(document).ready(function (){
     // Check if being accessed from phone
     var isMobile = false;
 
+    // Color navbar icons automatically
+    // Array to hold individual icon elements so they can be pushed over individually to iconColor function
+    var $icon = $(".navigationBar li").find("i");
+
+    for (var i = 0 ; i < $icon.length; i++) {
+        console.log($($icon[i]));
+        console.log($(".navigationBar").children());
+        iconColor($($icon[i]), $(".navigationBar").children());
+    }
+
+    // var thisPage = ($(location).attr("href"));
+    // console.log(thisPage);
+
   // Toggle 'My Account' and 'Logout' options when clicking username in navbar
     $(".username").click(function () {
       $(".userDropdown").slideToggle();
@@ -54,43 +67,25 @@ $(document).ready(function (){
         $icon.css("color", navColorArray[navIndex % navColorArray.length]);
     }
 
-  // Color navbar icons when hovering over navbar sections
-    $(".navigationBar li").hover(
-        function () {
-            // If class contains fa-home, fa-spinner, etc...
-            // Assign particular icon to variable
-            var $icon = $(this).find("i");
-            // console.log($icon)
-            iconColor($icon, $(".navigationBar").children());
-        },
-        function () {
-            if (!isMobile) {$(this).find("i").css("color", "white");}
+    /* SAVED FOR POSTERITY - DECIDED TO MAKE LARGE SCREEN UI MORE SIMILAR TO MOBILE FOR AESTHETIC PURPOSES
+    *******************************************************************************************************/
 
-        }
-    );
+        // // Color navbar icons when hovering over navbar sections
+        //   $(".navigationBar li").hover(
+        //       function () {
+        //           // If class contains fa-home, fa-spinner, etc...
+        //           // Assign particular icon to variable
+        //           var $icon = $(this).find("i");
+        //           // console.log($icon)
+        //           iconColor($icon, $(".navigationBar").children());
+        //       },
+        //       function () {
+        //           if (!isMobile) {$(this).find("i").css("color", "white");}
+        //
+        //       }
+        //   );
 
-    // Color navbar icons automatically on mobile
-    if ($(window).width() <= 768) {
-        isMobile = true;
+    /************************************************************************************************************/
 
-        // Array to hold individual icon elements so they can be pushed over individually to iconColor function
-        var $icon = $(".navigationBar li").find("i");
-
-        for (var i = 0 ; i < $icon.length; i++) {
-            console.log($($icon[i]));
-            console.log($(".navigationBar").children());
-            iconColor($($icon[i]), $(".navigationBar").children());
-        }
-
-        var thisPage = ($(location).attr("href"));
-        console.log(thisPage);
-    }
-
-
-    // console.log($("a").attr("href"));
-
-    $(".carousel").carousel({
-        interval:2000
-    })
 
 });

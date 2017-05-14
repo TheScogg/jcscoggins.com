@@ -75,6 +75,10 @@ a.navButton span {
     font-size: 1.2em;
 }
 
+.navigationBar {
+    background-color: rgb(58,58,58);
+}
+
 .navigationBar li:last-child {
     float: right;
     /*background-color: black;*/
